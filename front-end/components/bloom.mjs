@@ -38,7 +38,7 @@ function _formatHashtags(text) {
   if (!text) return text;
   // Match only hashtag characters, stopping at spaces;
   return text.replace(
-    /\B#[a-zA-Z0-9_]+/g,
+    /\B#[a-zA-Z0-9_-]+/g,
     (match) => `<a href="/hashtag/${match.slice(1)}">${match}</a>`,
   );
 }

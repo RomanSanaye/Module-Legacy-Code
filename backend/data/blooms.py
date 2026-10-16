@@ -25,7 +25,7 @@ class Rebloom:
     rebloom_timestamp: datetime.datetime
 
 
-# Represents a Bloom in the home timeline, including rebloom information when applicable.
+# Extends Bloom data with rebloom information needed by the home timeline.
 @dataclass
 class TimelineBloom:
     id: int

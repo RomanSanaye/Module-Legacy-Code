@@ -15,7 +15,7 @@ import {
   handleBloomSubmit,
   handleTyping,
 } from "../components/bloom-form.mjs";
-import {createBloom, handleRebloom} from "../components/bloom.mjs";
+import {createBloom} from "../components/bloom.mjs";
 
 // Home view - logged in or not
 function homeView() {
@@ -56,10 +56,6 @@ function homeView() {
     document
       .querySelector("[data-form='bloom']")
       ?.addEventListener("submit", handleBloomSubmit);
-    // Handles rebloom clicks for Bloom buttons rendered in the timeline.
-    document
-      .querySelectorAll("[data-action='rebloom']")
-      .forEach((button) => button.addEventListener("click", handleRebloom));
     document.querySelector("textarea")?.addEventListener("input", handleTyping);
   } else {
     renderOne(

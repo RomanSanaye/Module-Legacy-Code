@@ -18,6 +18,9 @@ const createBloom = (template, bloom) => {
   const bloomParser = new DOMParser();
 
   const bloomArticle = bloomFrag.querySelector("[data-bloom]");
+  // Attach the rebloom handler to this Bloom's own button.
+  const rebloomButton = bloomFrag.querySelector("[data-action='rebloom']");
+  rebloomButton?.addEventListener("click", handleRebloom);
   const bloomUsername = bloomFrag.querySelector("[data-username]");
   // Show who rebloomed the original Bloom when this timeline item is a rebloom.
   if (bloom.rebloomer) {
